@@ -1,0 +1,13 @@
+# Tell travis to use the new container-based infrastructure
+# https://docs.travis-ci.com/user/workers/container-based-infrastructure/
+sudo: required
+services:
+  - docker
+# Build the image using the Dockerfile.dev
+before_install:
+  - docker build -f Dockerfile.dev -t kristana/react-docker .
+
+# Run the test suite
+script:
+  # -e CI=true is used to make sure that the tests exit after they are done running
+  - docker run -e CI=true kristana/react-docker npm run test
