@@ -10,4 +10,4 @@ before_install:
 # Run the test suite
 script:
   # -e CI=true is used to make sure that the tests exit after they are done running
-  - docker run  kristana/react-docker npm run test -- --coverage
+  - docker run -e CI=true kristana/react-docker npm run test -- --coverage
