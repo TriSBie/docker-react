@@ -1,13 +1,8 @@
 version: '3'
-
 services:
   web:
-    # This is the name of the service
     build:
-      context: . # This is the path to the Dockerfile
-      dockerfile: Dockerfile.dev
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
-    volumes:
-      - /app/node_modules # This shows the volume that is being mounted
-      - .:/app
+      - '80:80'

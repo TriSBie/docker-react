@@ -11,3 +11,16 @@ before_install:
 script:
   # -e CI=true is used to make sure that the tests exit after they are done running
   - docker run -d kristana/react-docker
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-southeast-2"
+  app: "frontend"
+  env: "Frontend-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-2-995208286124" # S3 bucket name - where the code is stored
+  bucket_path: "docker"
+  on:
+    branch: main # only deploy when the master branch is updated
+    # branch master located in the github repository
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
