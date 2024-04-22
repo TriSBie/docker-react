@@ -9,7 +9,7 @@ RUN npm install
 
 COPY . . 
 
-RUN npm run build
+CMD ["npm", "run", "start"]
 # Copy the rest of the application code to the container.
 
 # FROM nginx
