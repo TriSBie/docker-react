@@ -10,7 +10,7 @@ before_install:
 # Run the test suite
 script:
   # -e CI=true is used to make sure that the tests exit after they are done running
-  - docker run -e CI=true kristana/docker-react npm run test
+  - docker run -d kristana/docker-react
 deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-2"
@@ -22,4 +22,4 @@ deploy:
     branch: main # only deploy when the master branch is updated
     # branch master located in the github repository
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
