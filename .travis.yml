@@ -10,7 +10,7 @@ before_install:
 # Run the test suite
 script:
   # -e CI=true is used to make sure that the tests exit after they are done running
-  - docker run -e CI=true stephengrider/docker-react npm run test
+  - docker run -e CI=true kristana/docker-react npm run test
 deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-2"
