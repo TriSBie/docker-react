@@ -22,4 +22,4 @@ deploy:
     branch: main # only deploy when the master branch is updated
     # branch master located in the github repository
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
