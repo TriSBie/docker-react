@@ -10,7 +10,7 @@ before_install:
 # Run the test suite
 script:
   # -e CI=true is used to make sure that the tests exit after they are done running
-  - docker run -d kristana/docker-react
+  - docker run -d kristana/react-docker
 deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-2"

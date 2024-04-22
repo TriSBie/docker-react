@@ -1,4 +1,4 @@
-FROM node:16-alpine as builder
+FROM node:16-alpine 
 # FROM node:16-alpine is the base image for the container. It is a lightweight image of Node.js 16 on Alpine Linux.
 WORKDIR /app
 # WORKDIR /app sets the working directory for the container to /app.
