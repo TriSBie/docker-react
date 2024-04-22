@@ -14,8 +14,8 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "ap-southeast-2"
-  app: "frontend"
-  env: "Frontend-env"
+  app: "docker-react"
+  env: "Docker-react-env"
   bucket_name: "elasticbeanstalk-ap-southeast-2-995208286124" # S3 bucket name - where the code is stored
   bucket_path: "docker"
   on:
